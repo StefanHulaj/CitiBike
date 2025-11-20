@@ -48,6 +48,10 @@ df_1 = pd.read_csv(os.path.join('df_weather.csv'),  index_col = False)
 
 ####
 
+fig = go.Figure(go.Bar(x = top20['start_station_name'], y = top20['value'], marker={'color': top20['value'],'colorscale': 'Blues'}))
+
+####
+
 ## line chart 
 
 fig_2 = make_subplots(specs=[[{"secondary_y": True}]])
@@ -74,4 +78,6 @@ with open(path_to_html, 'r') as f:
 ## Show in web page 
 st.header("Aggregated Bike Trips in New York City")
 st.components.v1.html(html_data,height = 1000)
+
+####
 

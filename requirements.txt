@@ -2,3 +2,7 @@ pandas
 plotly == 6.4
 numerize
 pillow
+datetime
+numpy
+streamlit
+os
