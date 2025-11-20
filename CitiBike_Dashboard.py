@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
-from streamlit_keplergl import keplergl_static 
-from keplergl import KeplerGl
 from datetime import datetime as dt 
 import os
 
@@ -15,7 +12,7 @@ path = r"C:\Users\stefa\CitiBike"
 
 ####
 
-df = pd.read_csv(os.path.join(path, 'Prepared Data', 'CitiBikeWeatherWrangled.csv'),  index_col = False)
+top20 = pd.read_csv(os.path.join(path, 'Top20.csv'),  index_col = False)
 
 ####
 
@@ -36,10 +33,6 @@ st.markdown("The dashboard will help visualize current usage trends of Citi Bike
 
 ## Groupby
 
-df['value'] = 1 
-df_groupby_bar = df.groupby('start_station_name', as_index=False).agg({'value': 'sum'})
-top20 = df_groupby_bar.nlargest(20, 'value')
-
 fig = go.Figure(go.Bar(x = top20['start_station_name'], y = top20['value'], marker={'color': top20['value'],'colorscale': 'Blues'}))
 
 fig.update_layout(
@@ -53,7 +46,7 @@ st.plotly_chart(fig, width=True)
 
 ####
 
-df_1 = df.drop(columns = {'started_at', 'ended_at', 'ride_id', 'start_station_id', 'end_station_id','_merge'})
+df_1 = pd.read_csv(os.path.join(path, 'df_weather.csv'),  index_col = False)
 
 ####
 
