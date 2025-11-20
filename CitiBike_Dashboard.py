@@ -8,11 +8,9 @@ import os
 
 ####
 
-path = r"C:\Users\stefa\CitiBike"
-
 ####
 
-top20 = pd.read_csv(os.path.join(path, 'Top20.csv'),  index_col = False)
+top20 = pd.read_csv(os.path.join('Top20.csv'),  index_col = False)
 
 ####
 
@@ -46,7 +44,7 @@ st.plotly_chart(fig, width=True)
 
 ####
 
-df_1 = pd.read_csv(os.path.join(path, 'df_weather.csv'),  index_col = False)
+df_1 = pd.read_csv(os.path.join('df_weather.csv'),  index_col = False)
 
 ####
 
