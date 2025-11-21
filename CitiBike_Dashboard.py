@@ -63,7 +63,7 @@ fig_2.add_trace(
 go.Scatter(x=df_1['date'], y=df_1['average_tempurature'], name='Daily temperature', marker={'color': 'red'}), secondary_y=True)
 
 st.header("Daily Bike Trips and Tempurature in New York City")
-st.plotly_chart(fig_2, width=True)
+st.plotly_chart(fig_2)
 
 ####
 
