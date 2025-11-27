@@ -142,7 +142,7 @@ elif page == 'Jersey City + Hoboken Combined Choropleth Map' :
 # -------------------------------------------------------------------------
 # 2) Load Jersey City census tracts
 # -------------------------------------------------------------------------
-    GEO_PATH = r"C:\Users\stefa\CitiBike\Dashboard\jersey_city_censustract_geojson.geojson"
+    GEO_PATH = r"Dashboard\jersey_city_censustract_geojson.geojson"
     gdf_jc = gpd.read_file(GEO_PATH)
 
     if gdf_jc.crs is None:
