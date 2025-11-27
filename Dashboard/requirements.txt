@@ -6,3 +6,4 @@ pillow
 datetime
 numpy
 streamlit
+osmnx
