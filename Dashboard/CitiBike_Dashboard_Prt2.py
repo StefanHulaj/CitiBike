@@ -14,7 +14,7 @@ from PIL import Image
 
 ####
 
-top20 = pd.read_csv(os.path.join('Top20.csv'),  index_col = False)
+top20 = pd.read_csv(os.path.join('Dashboard/Top20.csv'),  index_col = False)
 
 ####
 
