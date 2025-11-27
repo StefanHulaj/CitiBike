@@ -7,3 +7,6 @@ datetime
 numpy
 streamlit
 osmnx
+PIL
+shapely.geometry
+plotly.express
