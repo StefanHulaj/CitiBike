@@ -248,7 +248,7 @@ elif page == 'Jersey City + Hoboken Combined Choropleth Map' :
 else: 
 
     st.header("Conclusion and recommendations") 
-    bikes = Image.open("andrew-gook-VRLHw_rBjIw-unsplash.jpg") #source: UnSplash
+    bikes = Image.open("Dashboard/andrew-gook-VRLHw_rBjIw-unsplash.jpg") #source: UnSplash
     st.image(bikes)
     st.markdown("### My analysis has shown that Citi Bikes should focus on the following objectives moving forward:") 
     st.markdown("-Add more stations to locations in Jersey City to ensure that commuters have places to deposit their bikes after their commute is done.") 
