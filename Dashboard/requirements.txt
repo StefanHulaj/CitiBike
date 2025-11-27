@@ -1,4 +1,5 @@
 pandas
+geopandas
 plotly == 6.4
 numerize
 pillow
