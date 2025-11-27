@@ -8,5 +8,5 @@ numpy
 streamlit
 osmnx == 2.0.6
 pillow == 10.4.0
-shapely.geometry
+shapely
 plotly.express
