@@ -32,7 +32,7 @@ st.title("Citi Bike Strategy Dashboard")
 ### Intro page
 
 if page == "Intro page":
-    st.markdown("#### This dashboard aims at providing helpful insights on the expansion problems Divvy Bikes currently face.")
+    st.markdown("#### This dashboard aims at providing helpful insights on the expansion problems Citi Bikes currently face.")
     st.markdown("Right now, Citi Bikes run into a situation where customers complain about bikes not being available at certain times. This analysis will look at the potential reasons behind this. The dashboard is separated into five sections:")
 
     st.markdown(" - Most popular stations")
