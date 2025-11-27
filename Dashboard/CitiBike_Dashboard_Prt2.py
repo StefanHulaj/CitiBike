@@ -178,11 +178,11 @@ elif page == 'Jersey City + Hoboken Combined Choropleth Map' :
     jc_counts = (
         gdf_joined_jc.groupby("geoid")["trips"]
                  .sum()
-                 .reset_index(name="trip_sum")
+                 .reset_index(name="Number of Trips")
     )
 
     gdf_jc = gdf_jc.merge(jc_counts, on="geoid", how="left")
-    gdf_jc["trip_sum"] = gdf_jc["trip_sum"].fillna(0)
+    gdf_jc["Number of Trips"] = gdf_jc["Number of Trips"].fillna(0)
 
 # -------------------------------------------------------------------------
 # 5) Spatial join: assign points to Hoboken polygon
@@ -197,7 +197,7 @@ elif page == 'Jersey City + Hoboken Combined Choropleth Map' :
 # Sum trips for Hoboken
     hoboken_trip_sum = gdf_joined_hob["trips"].sum()
 
-    gdf_hoboken["trip_sum"] = hoboken_trip_sum
+    gdf_hoboken["Number of Trips"] = hoboken_trip_sum
 
 # -------------------------------------------------------------------------
 # 6) COMBINE BOTH sets of polygons into a single GeoDataFrame
@@ -212,10 +212,10 @@ elif page == 'Jersey City + Hoboken Combined Choropleth Map' :
         geojson=gdf_combined.__geo_interface__,
         locations="geoid",                    # JC uses tract GEOIDs, Hoboken uses "HOBOKEN_CITY"
         featureidkey="properties.geoid",
-        color="trip_sum",
+        color="Number of Trips",
         color_continuous_scale="Viridis",
         opacity=0.65,
-        hover_data={"geoid": True, "trip_sum": True}
+        hover_data={"geoid": True, "Number of Trips": True}
     )
 
 # Add ALL points on top
