@@ -42,7 +42,7 @@ if page == "Intro page":
     st.markdown(" - Recommendations")
     st.markdown(" - The dropdown menu on the left 'Aspect Selector' will take you to the different aspects of the analysis out team looked at")
 
-    myImage = Image.open("NJ Bikes.png")
+    myImage = Image.open("Dashboard/NJ Bikes.png")
     st.image(myImage)
 
 ####
@@ -51,7 +51,7 @@ if page == "Intro page":
 
 elif page == 'Weather component and bike usage' :
 
-    df_1 = pd.read_csv(os.path.join('df_weather.csv'),  index_col = False)
+    df_1 = pd.read_csv(os.path.join('Dashboard/df_weather.csv'),  index_col = False)
 
 ## line chart 
 
