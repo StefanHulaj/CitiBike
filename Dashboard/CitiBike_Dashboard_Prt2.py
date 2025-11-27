@@ -99,7 +99,7 @@ elif page == 'Most popular stations' :
 
 elif page == 'Interactive map with aggregated bike trips': 
 
-    path_to_html = "CitiBike Bike Trips Aggregated.html"
+    path_to_html = "Dashboard/CitiBike Bike Trips Aggregated.html"
 
 # Read file and keep in variable 
     with open(path_to_html, 'r') as f:
@@ -117,7 +117,7 @@ elif page == 'Interactive map with aggregated bike trips':
 
 elif page == 'Jersey City + Hoboken Combined Choropleth Map' :
 
-    df = pd.read_csv(os.path.join('CitiBike_final_locations_for_map_filtered.csv'),  index_col = False)
+    df = pd.read_csv(os.path.join('Dashboard/CitiBike_final_locations_for_map_filtered.csv'),  index_col = False)
 
 ####
 
