@@ -32,6 +32,8 @@ st.title("Citi Bike Strategy Dashboard")
 ### Intro page
 
 if page == "Intro page":
+    BikeImage = Image.open("Dashboard/carl-nenzen-loven-igKjieyjcko-unsplash.png")
+    st.image(BikeImage)
     st.markdown("#### This dashboard aims at providing helpful insights on the expansion problems Citi Bikes currently face.")
     st.markdown("Right now, Citi Bikes run into a situation where customers complain about bikes not being available at certain times. This analysis will look at the potential reasons behind this. The dashboard is separated into five sections:")
 
