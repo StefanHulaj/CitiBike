@@ -7,6 +7,6 @@ datetime
 numpy
 streamlit
 osmnx == 2.0.6
-pil == 10.4.0
+PIL == 10.4.0
 shapely.geometry
 plotly.express
